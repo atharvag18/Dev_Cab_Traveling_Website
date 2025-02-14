@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Clickable Email */}
           <p>
             <a
-              href="mailto:gaikwadatharv18@gmail.com "
+              href="mailto:sumitkore3322@gmail.com "
               target="_blank"
               className="contact-link"
             >
