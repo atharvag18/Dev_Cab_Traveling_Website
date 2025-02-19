@@ -44,12 +44,18 @@ const CabBooking = () => {
   return (
     <>
       <div className="cab-booking" id="home">
-        <h1 className="head" style={{}}>
-          Book Your Cab With Dev Cab <br />
-          <h3 style={{ marginTop: "10px", color: "red" }}>
-            * Exclusive Rates *
-          </h3>
-        </h1>
+        <div style={{ backgroundColor: "black", borderRadius: "10px" }}>
+          <h1
+            className="head"
+            style={{ backgroundColor: "black", borderRadius: "10px" }}
+          >
+            Book Your Cab With Dev Cab <br />
+            <h3 style={{ marginTop: "10px", color: "red" }}>
+              * Exclusive Rates *
+            </h3>
+          </h1>
+        </div>
+
         <div
           className="form-container"
           data-aos="fade-down"

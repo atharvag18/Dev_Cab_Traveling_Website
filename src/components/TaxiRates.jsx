@@ -3,18 +3,18 @@ import React from "react";
 const cars = [
   {
     name: "Innova",
-    image: "../../images/innova.png",
+    image: "../../images/innova1.png",
     rates: { mumbai: 9000, pune: 6000, goa: 6500 },
   },
   {
     name: "Ertiga",
     image: "../../images/ertiga.png",
-    rates: { mumbai: 7000, pune: 4500, goa: 5000 },
+    rates: { mumbai: 7500, pune: 5000, goa: 5500 },
   },
   {
     name: "Swift",
     image: "../../images/swift.png",
-    rates: { mumbai: 6000, pune: 3500, goa: 4000 },
+    rates: { mumbai: 6500, pune: 4000, goa: 4500 },
   },
 ];
 

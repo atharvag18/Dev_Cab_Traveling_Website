@@ -16,10 +16,10 @@ const cars = [
     rating: 5,
   },
   {
-    name: "INNOVA CRYSTA (SUV)",
+    name: "INNOVA  (SUV)",
     seating: "6 PASSENGERS",
     price: "Rs. PER KM",
-    image: "../../images/innova.png",
+    image: "../../images/innova1.png",
     rating: 5,
   },
   {
