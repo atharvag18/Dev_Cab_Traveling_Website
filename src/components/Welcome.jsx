@@ -1,15 +1,26 @@
 import React from "react";
 
-const Home = () => {
+const Welcome = () => {
   return (
     <>
       <div
         class="p-3 mb-2 bg-primary-subtle text-primary-emphasis con"
         style={{
           marginTop: "100px",
+          marginLeft:"auto",
+          marginRight:"auto",
+          
+          display:"flex",
+          flexDirection:"column",
           textAlign: "center",
           fontWeight: "bold",
           fontSize: "2.5rem",
+          backgroundColor:"blueviolet",
+          borderRadius:"10px",
+          width:"60%",
+          alignItems:"center",
+          alignContent:"center",
+          justifyContent:"center"
         }}
         id="#"
       >
@@ -28,7 +39,7 @@ const Home = () => {
         >
           <img src="../../images/home.png" alt="hero" />
         </div>
-        <div className="text" style={{ fontSize: "large", color: "white" }}>
+        <div className="text" style={{ fontSize: "large", color: "white" , lineSpacing:"1"}}>
           Welcome to Dev Tours and Travels! We're thrilled to have you here and
           are eager to assist you in crafting unforgettable travel experiences.
           Our mission is to provide top-notch transportation services that cater
@@ -54,4 +65,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Welcome;

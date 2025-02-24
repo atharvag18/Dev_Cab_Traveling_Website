@@ -45,15 +45,15 @@ const CabBooking = () => {
     <>
       <div className="cab-booking" id="home">
         <div style={{ backgroundColor: "black", borderRadius: "10px" }}>
-          <h1
+          <h2
             className="head"
-            style={{ backgroundColor: "black", borderRadius: "10px" }}
+            style={{ backgroundColor: "black", borderRadius: "10px", }}
           >
             Book Your Cab With Dev Cab <br />
-            <h3 style={{ marginTop: "10px", color: "red" }}>
+            <h4 style={{ marginTop: "10px", color: "red" }}>
               * Exclusive Rates *
-            </h3>
-          </h1>
+            </h4>
+          </h2>
         </div>
 
         <div

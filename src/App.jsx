@@ -1,45 +1,42 @@
-import "./index.css";
-import "./App.css";
+import React from 'react'
+import Home from "./pages/Home"
+import "./App.css"
 
-import React, { useEffect } from "react";
+import About from "./pages/About"
+import  Services  from "./pages/Services"
+import Contact from "./pages/Contact"
+import Navbar from "./components/Navbar"
+import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
+import CabList from './components/CabList'
+import Feedback from './components/Feedback'
+import Footer from './components/Footer'
+import BookingForm from './components/BookingForm'
+import Why from './components/Why'
 
-import Home from "./components/Home";
-import Service from "./components/Service";
-import Why from "./components/Why";
 
-import OurRoutes from "./components/OurRoutes";
-import Footer from "./components/Footer";
-import Navbar from "./components/NavBar";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import CabBooking from "./components/CabBooking";
-import CarSection from "./components/CarSection";
-import Feedback from "./components/FeedBack";
-import CabList from "./components/CabList";
-import TaxiRates from "./components/TaxiRates";
-
-const App = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+export const App = () => {
   return (
-    <div className="main">
+    <>
+    <Router>
       <Navbar />
-
-      <CabBooking />
-      <CarSection />
-      <TaxiRates />
-      <Home />
-
-      <Service />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/booking/:destination' element={<BookingForm />} />
+      </Routes>
       <Why />
-
-      <OurRoutes />
       <CabList />
+     
       <Feedback />
       <Footer />
-    </div>
-  );
-};
+    </Router>
+    
+   
+  
+    </>
+  )
+}
 
 export default App;
