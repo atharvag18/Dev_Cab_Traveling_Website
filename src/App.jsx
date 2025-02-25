@@ -16,8 +16,7 @@ import Footer from './components/Footer'
 import BookingForm from './components/BookingForm'
 import Why from './components/Why'
 
-
-export const App = () => {
+ const App = () => {
   return (
     <>
     <Router>
