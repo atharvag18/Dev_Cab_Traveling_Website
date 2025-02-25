@@ -3,14 +3,14 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeDrawer = () => setIsOpen(false);
 
   return (
-    
+    <>
     <nav className="navbar">
       <div className="navbar-logo" style={{ display: 'flex' }}>
         <img src="/images/logo.png" alt="logo" style={{ width: '50px', height: '50px' }} />
@@ -33,8 +33,8 @@ const Navbar = () => {
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
     </nav>
-   
+    </> 
   );
 };
 
-export default Navbar;
+export default NavBar;
