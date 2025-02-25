@@ -1,12 +1,15 @@
 import React from 'react'
-import Home from "./pages/Home"
+import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import "./App.css"
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
+
 
 import About from "./pages/About"
 import  Services  from "./pages/Services"
 import Contact from "./pages/Contact"
-import Navbar from "./components/Navbar"
-import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
+
+
 import CabList from './components/CabList'
 import Feedback from './components/Feedback'
 import Footer from './components/Footer'
@@ -32,10 +35,7 @@ export const App = () => {
       <Feedback />
       <Footer />
     </Router>
-    
-   
-  
-    </>
+     </>
   )
 }
 
