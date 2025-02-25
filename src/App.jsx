@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import CabList from './components/CabList';
-import Feedback from './components/Feedback';
-import Footer from './components/Footer';
-import BookingForm from './components/BookingForm';
-import Why from './components/Why';
+import Navbar from './components/Navbar.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Services from './pages/Services.jsx';
+import Contact from './pages/Contact.jsx';
+import CabList from './components/CabList.jsx';
+import Feedback from './components/FeedBack.jsx';
+import Footer from './components/Footer.jsx';
+import BookingForm from './components/BookingForm.jsx';
+import Why from './components/Why.jsx';
 
 const App = () => {
   return (
