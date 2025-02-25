@@ -48,7 +48,7 @@ const CabList = () => {
           alignItems: "center",
           margin: "auto",
         }}
-        id="routes"
+        
       >
         <h1> Routes</h1>
       </div>

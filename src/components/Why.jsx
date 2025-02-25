@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="why-choose-us" id="service">
+    <section className="why-choose-us" >
       <h2>Why Choose Dev Cars Service?</h2>
       <div className="features-container">
         {features.map((feature, index) => (

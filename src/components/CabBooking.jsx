@@ -43,7 +43,7 @@ const CabBooking = () => {
 
   return (
     <>
-      <div className="cab-booking" id="home">
+      <div className="cab-booking" >
         <div style={{ backgroundColor: "black", borderRadius: "10px" }}>
           <h2
             className="head"

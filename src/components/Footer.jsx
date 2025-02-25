@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer" >
       <div className="footer-content">
         <div className="contact-info">
           {/* Clickable Phone Number */}

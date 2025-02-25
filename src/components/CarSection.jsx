@@ -33,7 +33,7 @@ const cars = [
 
 const CarSection = () => {
   return (
-    <div className="car-section" id="cars">
+    <div className="car-section" >
       <h2 className="title">COMPLETE RANGE OF WELL MAINTAINED CARS</h2>
       <h3 className="description">
         We have a wide range of Vehicles for Outstation Tours on a hire basis.

@@ -20,7 +20,7 @@ const OurRoutes = () => {
   };
 
   return (
-    <div className="tour-section" id="tours">
+    <div className="tour-section" >
       <h1 className="service-heading">Top Destinations</h1>
       <h2 className="tour-title">Enjoy Your Weekends with Our Popular Tour Packages</h2>
       <div className="tour-list">

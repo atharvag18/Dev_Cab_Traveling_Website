@@ -32,7 +32,7 @@ const TaxiRates = () => {
           margin: "auto",
           color: "white",
         }}
-        id="rates"
+        
       >
         <h1>Rates</h1>
       </div>
