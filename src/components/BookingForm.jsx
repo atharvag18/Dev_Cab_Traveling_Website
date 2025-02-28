@@ -23,17 +23,13 @@ const BookingForm = () => {
 
     const handleCheckRates = () => {
         const ownerNumber = "917020033003"; 
-        let message = `🚖 *Booking Request* for *${destination}*%0A`;
-        message += `📌 *Trip Type:* ${tripType}%0A`;
-        message += `📍 *Pickup:* ${formData.pickup}%0A`;
-        message += `📍 *Drop:* ${formData.drop}%0A`;
-        message +=` 📅 *Date:* ${formData.date}%0A`;
-
-        if (tripType === "roundtrip") {
-            message += `🔄 *Return Date:* ${formData.returnDate}%0A`;
-        }
-
-        message += `📱 *Mobile:* ${formData.mobile}`;
+        let message = `🚖 *Booking Request* for *${destination}* : 
+        - 📌 *Trip Type:* ${tripType}
+        - 📍 *Pickup:* ${formData.pickup}
+        - 📍 *Drop:* ${formData.drop}
+        - 📅 *Date:* ${formData.date}
+        ${tripType === "roundtrip"? -`Return Date : ${formData.returnDate}`:""}
+        -📱 *Mobile:* ${formData.mobile}`;
 
         const whatsappURL = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappURL, "_blank");
