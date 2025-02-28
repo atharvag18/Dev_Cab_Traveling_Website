@@ -5,33 +5,41 @@ const BookingForm = () => {
     const { destination } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    
-    // Get image from location state (sent from Tour section)
-    const imageSrc = location.state?.image || "/images/default.png"; 
+
+    const imageSrc = location.state?.image || "/images/default.png";
 
     const [tripType, setTripType] = useState("oneway");
-    const [pickup, setPickup] = useState("");
-    const [drop, setDrop] = useState("");
-    const [date, setDate] = useState("");
-    const [returnDate, setReturnDate] = useState("");
-    const [mobile, setMobile] = useState("");
+    const [formData, setFormData] = useState({
+        pickup: "",
+        drop: "",
+        date: "",
+        returnDate: "",
+        mobile: "",
+    });
+
+    const handleInputChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
     const handleCheckRates = () => {
-        const ownerNumber = "917020033003";
-        let message = Booking `Request for ${destination}%0A`;
-        message += `Trip Type: ${tripType}%0A`;
-        message += `Pickup: ${pickup}%0A`;
-        message += `Drop: ${drop}%0A`;
-        message += `Date: ${date}%0A`;
-        
+        const ownerNumber = "917020033003"; 
+        let message = `🚖 *Booking Request* for *${destination}*%0A`;
+        message += `📌 *Trip Type:* ${tripType}%0A`;
+        message += `📍 *Pickup:* ${formData.pickup}%0A`;
+        message += `📍 *Drop:* ${formData.drop}%0A`;
+        message +=` 📅 *Date:* ${formData.date}%0A`;
+
         if (tripType === "roundtrip") {
-            message += Return `Date: ${returnDate}%0A`;
+            message += `🔄 *Return Date:* ${formData.returnDate}%0A`;
         }
 
-        message += `Mobile: ${mobile}`;
+        message += `📱 *Mobile:* ${formData.mobile}`;
 
-        const whatsappURL = `https://wa.me/${ownerNumber}?text=${message}`;
+        const whatsappURL = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappURL, "_blank");
+
+       
+        setFormData({ pickup: "", drop: "", date: "", returnDate: "", mobile: "" });
     };
 
     return (
@@ -48,21 +56,19 @@ const BookingForm = () => {
                         Round Trip
                     </button>
                 </div>
+                <input type="text" name="pickup" placeholder="Pickup Location" value={formData.pickup} onChange={handleInputChange} className="six" />
+                <input type="text" name="drop" placeholder="Drop Location" value={formData.drop} onChange={handleInputChange} className="six" />
+                <input type="date" name="date" value={formData.date} onChange={handleInputChange} className="six" />
 
-                <input type="text" placeholder="Pickup Location" value={pickup} onChange={(e) => setPickup(e.target.value)} className="six" />
-                <input type="text" placeholder="Drop Location" value={drop} onChange={(e) => setDrop(e.target.value)} className="six" />
-                <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="six" />
-                
                 {tripType === "roundtrip" && (
-                    <input type="date" placeholder="Return Date" value={returnDate} onChange={(e) => setReturnDate(e.target.value)} className="six" />
+                    <input type="date" name="returnDate" value={formData.returnDate} onChange={handleInputChange} className="six" />
                 )}
 
-                <input type="tel" placeholder="Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} className="six" />
+                <input type="tel" name="mobile" placeholder="Mobile Number" value={formData.mobile} onChange={handleInputChange} className="six" />
 
                 <button onClick={handleCheckRates} className="seven">Check Rates</button>
                 <button onClick={() => navigate(-1)} className="eight">Back</button>
             </div>
-
             <div className="nine">
                 <img src={imageSrc} alt="Booking" className="ten" />
             </div>
