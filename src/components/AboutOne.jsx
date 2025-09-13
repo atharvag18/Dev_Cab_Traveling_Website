@@ -1,6 +1,6 @@
 import React from "react";
 
-
+import ContactToggle from "./ContactToggle";
 const AboutOne = () => {
   return (
     <div className="company-wrapper">
@@ -40,6 +40,7 @@ const AboutOne = () => {
           </p>
         </div>
       </div>
+      <ContactToggle/>
     </div>
   );
 };

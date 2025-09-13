@@ -1,45 +1,70 @@
 import React from "react";
 
 const Welcome = () => {
+  const styles = {
+    headerBox: {
+      marginTop: "100px",
+      marginLeft: "auto",
+      marginRight: "auto",
+      display: "flex",
+      flexDirection: "column",
+      textAlign: "center",
+      fontWeight: "bold",
+      fontSize: "2rem",
+      backgroundColor: "blueviolet",
+      borderRadius: "10px",
+      width: "90%", 
+      maxWidth: "800px",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "15px",
+      color: "white",
+    },
+    container: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      marginTop: "30px",
+      gap: "20px",
+    },
+    imgBox: {
+      flex: "1 1 300px",
+      display: "flex",
+      justifyContent: "center",
+    },
+    image: {
+      maxWidth: "100%",
+      height: "auto",
+      borderRadius: "10px",
+    },
+    textBox: {
+      flex: "1 1 300px", // responsive flex
+      fontSize: "1rem",
+      color: "white",
+      lineHeight: "1.6",
+      textAlign: "justify",
+      padding: "10px",
+    },
+  };
+
   return (
     <>
-      <div
-        class="p-3 mb-2 bg-primary-subtle text-primary-emphasis con"
-        style={{
-          marginTop: "100px",
-          marginLeft:"auto",
-          marginRight:"auto",
-          
-          display:"flex",
-          flexDirection:"column",
-          textAlign: "center",
-          fontWeight: "bold",
-          fontSize: "2.5rem",
-          backgroundColor:"blueviolet",
-          borderRadius:"10px",
-          width:"60%",
-          alignItems:"center",
-          alignContent:"center",
-          justifyContent:"center"
-        }}
-        id="#"
-      >
+      {/* Header Section */}
+      <div className="con" style={styles.headerBox}>
         Welcome To Dev Cabs Services
       </div>
-      <div className="container">
-        <div
-          className="img"
-          data-aos="fade-down "
-          data-aos-duration="1000"
-          style={{
-            alignItems: "center",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <img src="../../images/home.png" alt="hero" />
+
+      {/* Content Section */}
+      <div className="container" style={styles.container}>
+        {/* Image */}
+        <div className="img" style={styles.imgBox}>
+          <img src="../../images/home.png" alt="hero" style={styles.image} />
         </div>
-        <div className="text" style={{ fontSize: "large", color: "white" , lineSpacing:"1"}}>
+
+        {/* Text */}
+        <div className="text" style={styles.textBox}>
           Welcome to Dev Tours and Travels! We're thrilled to have you here and
           are eager to assist you in crafting unforgettable travel experiences.
           Our mission is to provide top-notch transportation services that cater
@@ -58,7 +83,7 @@ const Welcome = () => {
           just a click away, ready to provide prompt and helpful responses.
           Thank you for considering Dev Tours and Travels as your travel
           partner. We look forward to the opportunity to serve you and make your
-          journey truly exceptional.
+          journey truly exceptional.
         </div>
       </div>
     </>

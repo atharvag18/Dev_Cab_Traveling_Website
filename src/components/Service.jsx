@@ -1,5 +1,5 @@
 import React from "react";
-
+import ContactToggle from "./ContactToggle";
 const Service = () => {
   return (
     <div className="containerService" >
@@ -49,6 +49,7 @@ const Service = () => {
           <p>Reliable Airport Transfers – Punctual, Safe & Affordable! 🚖 </p>
         </div>
       </div>
+      <ContactToggle />
     </div>
   );
 };
